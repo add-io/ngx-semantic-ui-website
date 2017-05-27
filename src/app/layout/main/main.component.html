@@ -1,29 +1,32 @@
 <!--<top-sidebar-demo></top-sidebar-demo>-->
 
-<div class="ui grid">
-  <div class="four wide column">
-    <div leftNav class="ui vertical inverted menu sticky" [ngClass]="{'visible': !menuCollapsed, 'hidden': menuCollapsed}">
-      <a class="item" routerLinkActive="active" routerLink="/introduction">Introduction</a>
-      <div class="item">
-        <div class="header">Modules</div>
-        <div class="menu">
-          <a class="item" routerLinkActive="active" routerLink="/modules/accordion">Accordion</a>
-          <a class="item" routerLinkActive="active" routerLink="/modules/checkbox">Checkbox</a>
-          <a class="item" routerLinkActive="active" routerLink="/modules/tab">Tab</a>
-          <a class="item" routerLinkActive="active" routerLink="/modules/dropdown">Dropdown</a>
-          <a class="item" routerLinkActive="active" routerLink="/modules/modal">Modal</a>
-          <a class="item" routerLinkActive="active" routerLink="/modules/sticky">Sticky</a>
-          <a class="item" routerLinkActive="active" routerLink="/modules/rating">Rating</a>
-          <a class="item" routerLinkActive="active" routerLink="/modules/progress">Progress</a>
-          <a class="item" routerLinkActive="active" routerLink="/modules/shape">Shape</a>
-          <a class="item" routerLinkActive="active" routerLink="/modules/search">Search</a>
-          <a class="item" routerLinkActive="active" routerLink="/modules/dimmer">Dimmer</a>
-          <a class="item" routerLinkActive="active" routerLink="/modules/embed">Embed</a>
-        </div>
+
+<div class="full height">
+  <div class="ui inverted menu mobile-site-menu">
+    <a class="icon item" (click)="triggerShowMenu()"><i class="content icon"></i></a>
+  </div>
+  <div class="ui vertical inverted menu site-menu" [class.show-menu]="showMenu" (click)="triggerHideMenu()" #mainMenu>
+    <a class="item" routerLinkActive="active" routerLink="/introduction">Introduction</a>
+    <div class="item">
+      <div class="header">Modules</div>
+      <div class="menu">
+        <a class="item" routerLinkActive="active" routerLink="/modules/accordion">Accordion</a>
+        <a class="item" routerLinkActive="active" routerLink="/modules/checkbox">Checkbox</a>
+        <a class="item" routerLinkActive="active" routerLink="/modules/tab">Tab</a>
+        <a class="item" routerLinkActive="active" routerLink="/modules/dropdown">Dropdown</a>
+        <a class="item" routerLinkActive="active" routerLink="/modules/modal">Modal</a>
+        <a class="item" routerLinkActive="active" routerLink="/modules/sticky">Sticky</a>
+        <a class="item" routerLinkActive="active" routerLink="/modules/rating">Rating</a>
+        <a class="item" routerLinkActive="active" routerLink="/modules/progress">Progress</a>
+        <a class="item" routerLinkActive="active" routerLink="/modules/shape">Shape</a>
+        <a class="item" routerLinkActive="active" routerLink="/modules/search">Search</a>
+        <a class="item" routerLinkActive="active" routerLink="/modules/dimmer">Dimmer</a>
+        <a class="item" routerLinkActive="active" routerLink="/modules/embed">Embed</a>
       </div>
     </div>
   </div>
-  <div class="twelve wide column">
+  <div class="ui dimmer"></div>
+  <div class="article">
     <router-outlet></router-outlet>
   </div>
 </div>

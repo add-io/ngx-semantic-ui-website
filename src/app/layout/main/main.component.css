@@ -1,0 +1,57 @@
+.full.height .site-menu {
+    z-index: 1001;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.full.height .article {
+    margin-left: 275px;
+    margin-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.full.height .mobile-site-menu {
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    border-radius: 0px;
+}
+
+.full.height .site-menu.show-menu {
+    display: block;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+    .full.height .site-menu {
+        display: none;
+    }
+    .full.height .article {
+        margin-left: 25px;
+        margin-right: 25px;
+        padding-top: 75px;
+    }
+}
+
+/* Small Monitor */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .full.height .mobile-site-menu {
+        display: none;
+    }
+}
+
+/* Large Monitor */
+
+@media (min-width: 1200px) {
+    .full.height .mobile-site-menu {
+        display: none;
+    }
+}
