@@ -19,7 +19,6 @@ export class CodeViewerComponent implements OnInit {
   }
 
   toggleCode() {
-    console.log(this.showCode);
     this.showCode = !this.showCode;
   }
 
