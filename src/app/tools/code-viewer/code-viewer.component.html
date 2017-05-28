@@ -1,0 +1,14 @@
+<div class="html ui segment" [class.top]="showCode" [class.attached]="showCode">
+    <div #content>
+        <ng-content></ng-content>
+    </div>
+    <div class="ui top attached label">
+        Example
+
+        <!--<i class="copy link icon" title="Copy Code"></i>-->
+        <i class="code link icon" (click)="toggleCode()" title="Toggle Code"></i>
+    </div>
+</div>
+<div class="ui bottom attached segment" [class.hidden]="!showCode">
+    <pre class="language-html"><code class="prism language-html" language="html" [code]="code"></code></pre>
+</div>

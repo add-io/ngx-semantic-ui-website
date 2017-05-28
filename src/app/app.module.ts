@@ -22,6 +22,8 @@ import { StickyComponent } from './modules/sticky/sticky.component';
 import { TabComponent } from './modules/tab/tab.component';
 import { MainComponent } from './layout/main/main.component';
 import { IntroductionComponent } from './pages/introduction/introduction.component';
+import { CodeViewerComponent } from './tools/code-viewer/code-viewer.component';
+import { PrismDirective } from './tools/prism.directive';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { IntroductionComponent } from './pages/introduction/introduction.compone
     StickyComponent,
     TabComponent,
     MainComponent,
-    IntroductionComponent
+    IntroductionComponent,
+    CodeViewerComponent,
+    PrismDirective
   ],
   imports: [
     BrowserModule,
